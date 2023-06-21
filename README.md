@@ -47,7 +47,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 ---
 
-# Angle Protocol audit details
+# Angle Protocol - Invitational audit details
 - Total Prize Pool: $52,500 USDC (Notion: Total award pool)
   - HM awards: $26,000 USDC (Notion: HM (main) pool)
   - QA awards: $3,000 USDC (Notion: QA pool)
