@@ -96,25 +96,25 @@ Automated findings output for the audit can be found [here](add link to report) 
 ## Scoping Details 
 ```
 - If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   
-- Total SLoC for these contracts?:  
-- How many external imports are there?:  
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  
-- Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   
-- What is the overall line coverage percentage provided by your tests?:  
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   
+- How many contracts are in scope?:   24
+- Total SLoC for these contracts?:  2002
+- How many external imports are there?: 2 
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  15
+- Does most of your code generally use composition or inheritance?:   Composition
+- How many external calls?:   3
+- What is the overall line coverage percentage provided by your tests?:  100
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   False
 - Please describe required context:   
-- Does it use an oracle?:  
-- Does the token conform to the ERC20 standard?:  
-- Are there any novel or unique curve logic or mathematical models?: 
+- Does it use an oracle?:  Chainlink
+- Does the token conform to the ERC20 standard?:  True
+- Are there any novel or unique curve logic or mathematical models?: https://github.com/AngleProtocol/angle-docs/blob/main/whitepapers/Transmuter.pdf
 - Does it use a timelock function?:  
 - Is it an NFT?: 
-- Does it have an AMM?:   
-- Is it a fork of a popular project?:   
+- Does it have an AMM?:   True
+- Is it a fork of a popular project?:   False
 - Does it use rollups?:   
 - Is it multi-chain?:  
-- Does it use a side-chain?: 
+- Does it use a side-chain?: False
 ```
 
 # Tests
