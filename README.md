@@ -12,21 +12,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ---
 
-# Audit setup
-
-## 🐺 C4: Set up repos
-- [ ] Create a new private repo named `YYYY-MM-sponsorname` using this repo as a template.
-- [ ] Rename this repo to reflect audit date (if applicable)
-- [ ] Rename auditt H1 below
-- [ ] Update pot sizes
-- [ ] Fill in start and end times in audit bullets below
-- [ ] Add link to submission form in audit details below
-- [ ] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
-- [ ] Add matching info to the Code4rena site
-- [ ] Add sponsor to this private repo with 'maintain' level access.
-- [ ] Send the sponsor contact the url for this repo to follow the instructions below and add contracts here. 
-- [ ] Delete this checklist.
-
 # Repo setup
 
 ## ⭐️ Sponsor: Add code to this repo
@@ -62,22 +47,19 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 ---
 
-# Sponsorname audit details
-- Total Prize Pool: XXX XXX USDC (Notion: Total award pool)
-  - HM awards: XXX XXX USDC (Notion: HM (main) pool)
-  - Analysis awards: XXX XXX USDC (Notion: Analysis pool)
-  - QA awards: XXX XXX USDC (Notion: QA pool)
-  - Bot Race awards: XXX XXX USDC (Notion: Bot Race pool)
-  - Gas awards: XXX XXX USDC (Notion: Gas pool)
-  - Judge awards: XXX XXX USDC (Notion: Judge Fee)
-  - Lookout awards: XXX XXX USDC (Notion: Sum of Pre-sort fee + Pre-sort early bonus)
+# Angle Protocol audit details
+- Total Prize Pool: $52,500 USDC (Notion: Total award pool)
+  - HM awards: $26,000 USDC (Notion: HM (main) pool)
+  - QA awards: $3,000 USDC (Notion: QA pool)
+  - Gas awards: $1,000 USDC (Notion: Gas pool)
+  - Judge awards: $8,000 USDC (Notion: Judge Fee)
   - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
-  - (this line can be removed if there is no mitigation) Mitigation Review: XXX XXX USDC (*Opportunity goes to top 3 certified wardens based on placement in this audit.*)
+  - Mitigation Review: $14,000 USDC (*Opportunity goes to top 3 certified wardens based on placement in this audit.*)
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/YYYY-MM-AuditName/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-06-angle-protocol/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts TBD XXX XXX XX 20:00 UTC (ex. `Starts March 22, 2023 20:00 UTC`)
-- Ends TBD XXX XXX XX 20:00 UTC (ex. `Ends March 30, 2023 20:00 UTC`)
+- Starts June 26, 2023 20:00 UTC 
+- Ends July 06, 2023 20:00 UTC 
 
 ## Automated Findings / Publicly Known Issues
 
