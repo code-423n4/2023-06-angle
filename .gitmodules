@@ -1,0 +1,8 @@
+[submodule "transmuter"]
+	path = transmuter
+	url = https://github.com/AngleProtocol/angle-transmuter
+    branch = code-423n4-2023-06-angle
+[submodule "merkl"]
+	path = merkl
+	url = https://github.com/AngleProtocol/merkl-contracts
+    branch = code-423n4-2023-06-angle
