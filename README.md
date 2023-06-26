@@ -1,11 +1,11 @@
 # Angle Protocol - Invitational audit details
 
-- Total Prize Pool: $52,500 USDC (Notion: Total award pool)
-  - HM awards: $26,000 USDC (Notion: HM (main) pool)
-  - QA awards: $3,000 USDC (Notion: QA pool)
-  - Gas awards: $1,000 USDC (Notion: Gas pool)
-  - Judge awards: $8,000 USDC (Notion: Judge Fee)
-  - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
+- Total Prize Pool: $52,500 USDC
+  - HM awards: $26,000 USDC
+  - QA awards: $3,000 USD
+  - Gas awards: $1,000 USDC
+  - Judge awards: $8,000 USDC
+  - Scout awards: $500 USDC
   - Mitigation Review: $14,000 USDC (_Opportunity goes to top 3 certified wardens based on placement in this audit._)
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-06-angle-protocol/submit)
