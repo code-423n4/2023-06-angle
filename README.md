@@ -109,6 +109,7 @@ First, clone the repo recursively:
 ```bash
 git clone https://github.com/code-423n4/2023-06-angle --recursive
 cd 2023-06-angle/transmuter
+yarn
 forge i
 yarn test
 cd ../merkl
