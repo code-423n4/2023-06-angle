@@ -15,13 +15,12 @@
 
 ## Documentation
 
-- [Overview of the Transmuter system](transmuter/README.md)
+- [Overview of the Transmuter system](<[transmuter/README.md](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/README.md)>)
 - [Transmuter Whitepaper](https://docs.angle.money/overview/whitepapers)
 - [Angle Documentation](https://docs.angle.money)
 - [Angle Developers Documentation](https://developers.angle.money)
 - [Merkl documentation](https://docs.angle.money/side-products/merkl)
-- [Merkl overview](merkl/README.md)
--
+- [Merkl overview](https://github.com/AngleProtocol/merkl-contracts/blob/febb61a09c8e81877159c6d89c12bd308b74d6ee/README.md)
 
 ## Automated Findings / Publicly Known Issues
 
@@ -35,7 +34,7 @@ _Note for C4 wardens: Anything included in the automated findings output is cons
 - In the burn, if there is one asset which is making 99% of the basket, and another one 1%: if the one making 1% depegs, it still impacts the burn for the asset that makes the majority of the funds
 - The whitelist function for burns and redemptions are somehow breaking the fairness of the system as whitelisted actors will redeem more value
 
-Trust assumptions of the system can also be checked [here](transmuter/README.md).
+Trust assumptions of the system can also be checked [here](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/README.md).
 
 ## Scope
 
@@ -68,9 +67,15 @@ Trust assumptions of the system can also be checked [here](transmuter/README.md)
 
 ## Out of scope
 
-| Contracts | SLOC | Purpose | Libraries used |
-| --------- | ---- | ------- | -------------- |
-|           |      |         |                |
+All files not listed above are out of scope for this audit.
+
+| Contracts                                                                                                                                                                 | SLOC | Purpose                                                                | Libraries used |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ---------------------------------------------------------------------- | -------------- |
+| [transmuter/transmuter/configs/\*\*.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/configs)    |      | Configuration file to create mock and prod deployments (not finalized) |                |
+| [transmuter/transmuter/Layout.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/Layout.sol)       |      | Contract to check the storage layout is well understood                |                |
+| [transmuter/interfaces/\*\*.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/interfaces)                    |      |                                                                        |                |
+| [transmuter/utils/\*\*.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/utils)                              |      |                                                                        |                |
+| [merkl/contracts/](https://github.com/AngleProtocol/merkl-contracts/blob/febb61a09c8e81877159c6d89c12bd308b74d6ee/contracts/): all files aside from the 2 listed in scope |      |                                                                        |                |
 
 ## Scoping Details
 
