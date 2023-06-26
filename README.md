@@ -19,38 +19,64 @@ Automated findings output for the audit can be found [here](add link to report) 
 
 _Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards._
 
-[ ⭐️ SPONSORS ADD INFO HERE ]
+- Lack of support for ERC165
+- At initialization, fees need to be < 100% for 100% exposure because the first exposures will be ~100%
+- If at some point there are 0 funds in the system it’ll break as `amountToNextBreakPoint` will be 0
+- In the burn, if there is one asset which is making 99% of the basket, and another one 1%: if the one making 1% depegs, it still impacts the burn for the asset that makes the majority of the funds
+- The whitelist function for burns and redemptions are somehow breaking the fairness of the system as whitelisted actors will redeem more value
+
+Trust assumptions of the system can also be checked [here](transmuter/README.md).
 
 # Overview
 
-_Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)_
+- [Overview of the Transmuter system](transmuter/README.md)
+- [Transmuter Whitepaper](https://docs.angle.money/overview/whitepapers)
+- [Angle Documentation](https://docs.angle.money)
+- [Angle Developers Documentation](https://developers.angle.money)
+- [Merkl documentation](https://docs.angle.money/side-products/merkl)
+- [Merkl overview](merkl/README.md)
 
 # Scope
 
-_List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus._
-
-_For line of code counts, we recommend using [cloc](https://github.com/AlDanial/cloc)._
-
-| Contract                                                   | SLOC | Purpose                | Libraries used                                           |
-| ---------------------------------------------------------- | ---- | ---------------------- | -------------------------------------------------------- |
-| [contracts/folder/sample.sol](contracts/folder/sample.sol) | 123  | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| Contracts (24)                                                                     | SLOC (2276) | Purpose                                                         | Libraries used |
+| ---------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------- | -------------- |
+| transmuter/contracts/savings/BaseSavings.sol                                       | 10          |                                                                 |                |
+| transmuter/contracts/savings/Savings.sol                                           | 95          |                                                                 |                |
+| transmuter/contracts/savings/SavingsVest.sol                                       | 105         | ERC4626 to distribute yield to agEUR holders                    |                |
+| transmuter/contracts/transmuter/facets/AccessControlModifiers.sol                  | 13          |                                                                 |                |
+| transmuter/contracts/transmuter/facets/DiamondCut.sol                              | 10          | See ERC-2535.                                                   |                |
+| transmuter/contracts/transmuter/facets/DiamondLoupe.sol                            | 92          | See ERC-2535.                                                   |                |
+| transmuter/contracts/transmuter/facets/Getters.sol                                 | 105         | View functions ot fetch the storage of the Transmuter           |                |
+| transmuter/contracts/transmuter/facets/Redeemer.sol                                | 113         | Redeeming functionalities                                       |                |
+| transmuter/contracts/transmuter/facets/RewardHandler.sol                           | 45          |                                                                 |                |
+| transmuter/contracts/transmuter/facets/SettersGovernor.sol                         | 120         | Admin functions of the Transmuter - Governor Role               |                |
+| transmuter/contracts/transmuter/facets/SettersGuardian.sol                         | 19          | Admin functions of the Transmuter - Guardian Role               |                |
+| transmuter/contracts/transmuter/facets/Swapper.sol                                 | 345         | User facing swap functions                                      |                |
+| transmuter/contracts/transmuter/libraries/LibDiamond.sol                           | 122         | See ERC-2535.                                                   |                |
+| transmuter/contracts/transmuter/libraries/LibHelpers.sol                           | 45          |                                                                 |                |
+| transmuter/contracts/transmuter/libraries/LibManager.sol                           | 29          |                                                                 |                |
+| transmuter/contracts/transmuter/libraries/LibOracle.sol                            | 98          |                                                                 |                |
+| transmuter/contracts/transmuter/libraries/LibSetters.sol                           | 201         |                                                                 |                |
+| transmuter/contracts/transmuter/libraries/LibStorage.sol                           | 17          |                                                                 |                |
+| transmuter/contracts/transmuter/libraries/LibWhitelist.sol                         | 19          |                                                                 |                |
+| transmuter/contracts/transmuter/libraries/LibGetters.sol                           | 56          |                                                                 |                |
+| transmuter/contracts/transmuter/DiamondProxy.sol                                   | 31          | See ERC-2535. Base Transmuter contract                          |                |
+| transmuter/contracts/transmuter/Storage.sol                                        | 101         | Structs of the Transmuter storage                               |                |
+| [merkl/contracts/DistributionCreator.sol](merkl/contracts/DistributionCreator.sol) | 301         | Contract to initiate a distribution of rewards to UniswapV3 LPs |                |
+| [merkl/contracts/Distributor.sol](merkl/contracts/Distributor.sol)                 | 184         | Contract to distribute incentives via Merkl tree airdrops       |                |
 
 ## Out of scope
 
-_List any files/contracts that are out of scope for this audit._
-
-# Additional Context
-
-_Describe any novel or unique curve logic or mathematical models implemented in the contracts_
-
-_Sponsor, please confirm/edit the information below._
+| Contracts | SLOC | Purpose | Libraries used |
+| --------- | ---- | ------- | -------------- |
+|           |      |         |                |
 
 ## Scoping Details
 
 ```
 - If you have a public code repo, please share it here:
 - How many contracts are in scope?:   24
-- Total SLoC for these contracts?:  2002
+- Total SLoC for these contracts?:  2276
 - How many external imports are there?: 2
 - How many separate interfaces and struct definitions are there for the contracts within scope?:  15
 - Does most of your code generally use composition or inheritance?:   Composition
@@ -72,6 +98,19 @@ _Sponsor, please confirm/edit the information below._
 
 # Tests
 
-_Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report._
+First, clone the repo recursively:
 
-_Note: Many wardens run Slither as a first pass for testing. Please document any known errors with no workaround._
+```bash
+git clone https://github.com/code-423n4/2023-06-angle --recursive
+cd 2023-06-angle/transmuter
+forge i
+yarn test
+cd ../merkl
+yarn
+forge i
+yarn hardhat:test
+```
+
+## Slither
+
+Slither can be run using `yarn slither` in the transmuter repository. We've already gone through the slither report.
