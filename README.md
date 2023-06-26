@@ -13,6 +13,16 @@
 - Starts June 26, 2023 20:00 UTC
 - Ends July 06, 2023 20:00 UTC
 
+## Documentation
+
+- [Overview of the Transmuter system](transmuter/README.md)
+- [Transmuter Whitepaper](https://docs.angle.money/overview/whitepapers)
+- [Angle Documentation](https://docs.angle.money)
+- [Angle Developers Documentation](https://developers.angle.money)
+- [Merkl documentation](https://docs.angle.money/side-products/merkl)
+- [Merkl overview](merkl/README.md)
+-
+
 ## Automated Findings / Publicly Known Issues
 
 Automated findings output for the audit can be found [here](add link to report) within 24 hours of audit opening.
@@ -27,16 +37,7 @@ _Note for C4 wardens: Anything included in the automated findings output is cons
 
 Trust assumptions of the system can also be checked [here](transmuter/README.md).
 
-# Overview
-
-- [Overview of the Transmuter system](transmuter/README.md)
-- [Transmuter Whitepaper](https://docs.angle.money/overview/whitepapers)
-- [Angle Documentation](https://docs.angle.money)
-- [Angle Developers Documentation](https://developers.angle.money)
-- [Merkl documentation](https://docs.angle.money/side-products/merkl)
-- [Merkl overview](merkl/README.md)
-
-# Scope
+## Scope
 
 | Contracts (24)                                                                     | SLOC (2276) | Purpose                                                         | Libraries used |
 | ---------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------- | -------------- |
@@ -96,7 +97,7 @@ Trust assumptions of the system can also be checked [here](transmuter/README.md)
 - Does it use a side-chain?: False
 ```
 
-# Tests
+## Tests
 
 First, clone the repo recursively:
 
