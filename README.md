@@ -67,15 +67,15 @@ Trust assumptions of the system can also be checked [here](https://github.com/An
 
 ## Out of scope
 
-All files not listed above are out of scope for this audit.
+All files not listed above are out of scope for this audit. It includes:
 
-| Contracts                                                                                                                                                                 | SLOC | Purpose                                                                | Libraries used |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ---------------------------------------------------------------------- | -------------- |
-| [transmuter/transmuter/configs/\*\*.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/configs)    |      | Configuration file to create mock and prod deployments (not finalized) |                |
-| [transmuter/transmuter/Layout.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/Layout.sol)       |      | Contract to check the storage layout is well understood                |                |
-| [transmuter/interfaces/\*\*.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/interfaces)                    |      |                                                                        |                |
-| [transmuter/utils/\*\*.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/utils)                              |      |                                                                        |                |
-| [merkl/contracts/](https://github.com/AngleProtocol/merkl-contracts/blob/febb61a09c8e81877159c6d89c12bd308b74d6ee/contracts/): all files aside from the 2 listed in scope |      |                                                                        |                |
+| Contracts                                                                                                                                                                 | Purpose                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [transmuter/transmuter/configs/\*\*.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/configs)    | Configuration file to create mock and prod deployments (not finalized) |
+| [transmuter/transmuter/Layout.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/Layout.sol)       | Contract to check the storage layout is well understood                |
+| [transmuter/interfaces/\*\*.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/interfaces)                    |                                                                        |
+| [transmuter/utils/\*\*.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/utils)                              |                                                                        |
+| [merkl/contracts/](https://github.com/AngleProtocol/merkl-contracts/blob/febb61a09c8e81877159c6d89c12bd308b74d6ee/contracts/): all files aside from the 2 listed in scope |                                                                        |
 
 ## Scoping Details
 
