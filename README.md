@@ -33,6 +33,8 @@ _Note for C4 wardens: Anything included in the automated findings output is cons
 - If at some point there are 0 funds in the system it’ll break as `amountToNextBreakPoint` will be 0
 - In the burn, if there is one asset which is making 99% of the basket, and another one 1%: if the one making 1% depegs, it still impacts the burn for the asset that makes the majority of the funds
 - The whitelist function for burns and redemptions are somehow breaking the fairness of the system as whitelisted actors will redeem more value
+- Requirements on negative fees and on setters can be bypassed by taking multiple actions (set negative fees and then decrease fees) but this is acceptable as remains within governance powers.
+- When negative fees are set the guardian could create arbitrage loops than could potentially enable funds stealing. This is a known issue and negative fees have to be set carefully and for reduced period of time.
 
 Trust assumptions of the system can also be checked [here](https://github.com/AngleProtocol/angle-transmuter/tree/9707ee4ed3d221e02dcfcd2ebaa4b4d38d280936/README.md).
 
