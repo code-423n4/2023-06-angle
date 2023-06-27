@@ -58,7 +58,7 @@ Trust assumptions of the system can also be checked [here](https://github.com/An
 | [transmuter/contracts/transmuter/libraries/LibOracle.sol](https://github.com/AngleProtocol/angle-transmuter/tree/9707ee4ed3d221e02dcfcd2ebaa4b4d38d280936/contracts/transmuter/libraries/LibOracle.sol)                     | 98          |                                                                 |                |
 | [transmuter/contracts/transmuter/libraries/LibSetters.sol](https://github.com/AngleProtocol/angle-transmuter/tree/9707ee4ed3d221e02dcfcd2ebaa4b4d38d280936/contracts/transmuter/libraries/LibSetters.sol)                   | 201         |                                                                 |                |
 | [transmuter/contracts/transmuter/libraries/LibStorage.sol](https://github.com/AngleProtocol/angle-transmuter/tree/9707ee4ed3d221e02dcfcd2ebaa4b4d38d280936/contracts/transmuter/libraries/LibStorage.sol)                   | 17          |                                                                 |                |
-| [transmuter/contracts/transmuter/libraries/LibWhitelist.sol](https://github.com/AngleProtocol/angle-transmuter/tree/9707ee4ed3d221e02dcfcd2ebaa4b4d38d280936/contracts/transmuter/libraries/LibWhitelist.sol)                | 19          |                                                                 |                |
+| [transmuter/contracts/transmuter/libraries/LibWhitelist.sol](https://github.com/AngleProtocol/angle-transmuter/tree/9707ee4ed3d221e02dcfcd2ebaa4b4d38d280936/contracts/transmuter/libraries/LibWhitelist.sol)               | 19          |                                                                 |                |
 | [transmuter/contracts/transmuter/libraries/LibGetters.sol](https://github.com/AngleProtocol/angle-transmuter/tree/9707ee4ed3d221e02dcfcd2ebaa4b4d38d280936/contracts/transmuter/libraries/LibGetters.sol)                   | 56          |                                                                 |                |
 | [transmuter/contracts/transmuter/DiamondProxy.sol](https://github.com/AngleProtocol/angle-transmuter/tree/9707ee4ed3d221e02dcfcd2ebaa4b4d38d280936/contracts/transmuter/DiamondProxy.sol)                                   | 31          | See ERC-2535. Base Transmuter contract                          |                |
 | [transmuter/contracts/transmuter/Storage.sol](https://github.com/AngleProtocol/angle-transmuter/tree/9707ee4ed3d221e02dcfcd2ebaa4b4d38d280936/contracts/transmuter/Storage.sol)                                             | 101         | Structs of the Transmuter storage                               |                |
@@ -115,13 +115,15 @@ git clone https://github.com/code-423n4/2023-06-angle --recursive
 git submodule update --init --recursive
 ```
 
-Then, execute the following:
+Then, execute the following (eventually replacing with your custom Arbitrum endpoint):
+
 ```
 cd 2023-06-angle/transmuter
 yarn
 forge i
 yarn test
 cd ../merkl
+echo ETH_NODE_URI_ARBITRUM=https://1rpc.io/arb > .env
 yarn
 forge i
 yarn hardhat:test
