@@ -15,7 +15,7 @@
 
 ## Documentation
 
-- [Overview of the Transmuter system](<[transmuter/README.md](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/README.md)>)
+- [Overview of the Transmuter system](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/README.md)
 - [Transmuter Whitepaper](https://docs.angle.money/overview/whitepapers)
 - [Angle Documentation](https://docs.angle.money)
 - [Angle Developers Documentation](https://developers.angle.money)
@@ -58,7 +58,7 @@ Trust assumptions of the system can also be checked [here](https://github.com/An
 | [transmuter/contracts/transmuter/libraries/LibOracle.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/libraries/LibOracle.sol)                     | 98          |                                                                 |                |
 | [transmuter/contracts/transmuter/libraries/LibSetters.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/libraries/LibSetters.sol)                   | 201         |                                                                 |                |
 | [transmuter/contracts/transmuter/libraries/LibStorage.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/libraries/LibStorage.sol)                   | 17          |                                                                 |                |
-| [transmuter/contracts/transmuter/libraries/LibWhitelist.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/ontracts/transmuter/libraries/LibWhitelist.sol)                | 19          |                                                                 |                |
+| [transmuter/contracts/transmuter/libraries/LibWhitelist.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/libraries/LibWhitelist.sol)                | 19          |                                                                 |                |
 | [transmuter/contracts/transmuter/libraries/LibGetters.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/libraries/LibGetters.sol)                   | 56          |                                                                 |                |
 | [transmuter/contracts/transmuter/DiamondProxy.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/DiamondProxy.sol)                                   | 31          | See ERC-2535. Base Transmuter contract                          |                |
 | [transmuter/contracts/transmuter/Storage.sol](https://github.com/AngleProtocol/angle-transmuter/tree/040f9beeb394fe85f3e647bfcccd58acea575b0e/contracts/transmuter/Storage.sol)                                             | 101         | Structs of the Transmuter storage                               |                |
@@ -107,7 +107,16 @@ All files not listed above are out of scope for this audit. It includes:
 First, clone the repo recursively:
 
 ```bash
+# Clone using SSH
+git clone git@github.com:code-423n4/2023-06-angle.git --recursive
+# Or clone using HTTPS
 git clone https://github.com/code-423n4/2023-06-angle --recursive
+# Or update submodules if the cloning was done without recursive
+git submodule update --init --recursive
+```
+
+Then, execute the following:
+```
 cd 2023-06-angle/transmuter
 yarn
 forge i
