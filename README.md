@@ -24,10 +24,6 @@
 
 ## Automated Findings / Publicly Known Issues
 
-Automated findings output for the audit can be found [here](add link to report) within 24 hours of audit opening.
-
-_Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards._
-
 - Lack of support for ERC165
 - At initialization, fees need to be < 100% for 100% exposure because the first exposures will be ~100%
 - If at some point there are 0 funds in the system it’ll break as `amountToNextBreakPoint` will be 0
